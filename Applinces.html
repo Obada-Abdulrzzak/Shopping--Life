@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--منتجات-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="Details.html">
+    
+    <title>Applinces</title>
+
+</head>
+<body>
+    <section id="header">
+        <a href="#"><img src="" alt="" class="logo"></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Aboutus.html">About Us</a></li>
+                <li><a href="Applinces.html">Prouducts</a></li>
+            </ul>
+        </div>
+
+    </section>
+
+    <table>
+        <thead>
+            <tr>
+                <th>صورة المنتج</th>
+                <th>اسم المنتج</th>
+                <th>سعر المنتج</th>
+                <th>تفاصيل</th>
+                <th></th>
+            </tr>
+
+            <tr>
+                <td><img src="1.jpeg" alt="Product 1" class="ProductImage"></td>
+                <td>غسالة Samsung</td>
+                <td>2000000.syp</td>
+                <td>غسالة سامسونغ اوتوماتيك</td>
+                <td><button onclick="addToCart('غسالة سامسونغ', 2000000, '1.jpeg')">Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="2.jpeg" alt="Product 2" class="ProductImage"></td>
+                <td>خلاط Phillips</td>
+                <td>syp.400000</td>
+                <td>خلاط فيليبس سرعتين 700 واط بسعة 2 لتر</td>
+                <td><button onclick="addToCart('خلاط فيليبس', 400000, '2.jpeg')">Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="3.jpeg" alt="Product 3" class="ProductImage"></td>
+                <td>تلفزيون Hitachi</td>
+                <td>syp.1750000</td>
+                <td>تلفزيون هيتاشي بشاشة 32 بوصة HD</td>
+                <td><button onclick="addToCart('تلفزيون هيتاشي', 1750000, '3.jpeg')">Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="4.jpeg" alt="Product 4" class="ProductImage"></td>
+                <td>مدفأة كهربائية Hallojen</td>
+                <td>syp.350000</td>
+                <td>مدفأة كهربائية وشيعة من هالوجين 2200 واط </td>
+                <td><button onclick="addToCart('مدفأة كهربائية', 350000, '4.jpeg')">Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="5.jpeg" alt="Product 5" class="ProductImage"></td>
+                <td>تلفزيون Sony</td>
+                <td>syp.2500000</td>
+                <td>تلفزيون سوني بشاشة 40 بوصة 4K</td>
+                <td><button onclick="addToCart('تلفزيون سوني', 2500000, '5.jpeg')">Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="6.jpeg" alt="Product 6" class="ProductImage"></td>
+                <td>راوتر TP LINK</td>
+                <td>syp.1150000</td>
+                <td>راوتر انترنت منزلي</td>
+                <td><button onclick="addToCart('راوتر تب لينك', 1150000, '6.jpeg')">Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="7.jpeg" alt="Product 7" class="ProductImage"></td>
+                <td>براد ماء Majic</td>
+                <td>syp.2700000</td>
+                <td>براد ماء بمحرك انفرتر</td>
+                <td><button onclick="addToCart('براد ماء ماجيك', 2700000, '7.jpeg')">Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="8.jpeg" alt="Product 8" class="ProductImage"></td>
+                <td>براد Alshami</td>
+                <td>syp.3500000</td>
+                <td>براد الشامي بمحرك انفرتر تبريد هوائي</td>
+                <td><button onclick="addToCart('براد الشامي', 3500000, '8.jpeg')">Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="9.jpeg" alt="Product 9" class="ProductImage"></td>
+                <td>تلفزيون Sony</td>
+                <td>syp.4000000</td>
+                <td>تلفزيون من سوني بشاشة 70 بوصة 4K</td>
+                <td><button onclick="addToCart('2022تلفزيون سوني', 4000000, '9.jpeg')">Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="10.jpg" alt="Product 10" class="ProductImage"></td>
+                <td>فرن غاز الكترولوكس من Toshiba</td>
+                <td>syp.4500000</td>
+                <td>فرن غاز من توشيبا 5 عيون</td>
+                <td><button onclick="addToCart('فرن غاز توشيبا', 4500000, '10.jpg')">Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="11.jpg" alt="Product 11" class="ProductImage"></td>
+                <td>PlayStation 5 Slim</td>
+                <td>syp.4800000</td>
+                <td>بلايستيشن 5 ذاكرة 1 تيرابايت</td>
+                <td><button onclick="addToCart('بلايستيشن 5', 4800000, '11.jpg')">Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="12.jpg" alt="Product 12" class="ProductImage"></td>
+                <td>PlayStation 4 Slim</td>
+                <td>syp.3800000</td>
+                <td>بلايستيشن 4 ذاكرة 500 غيغابايت</td>
+                <td><button onclick="addToCart('بلايستيشن 4', 3800000, '12.jpg')">Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="13.jpg" alt="Product 13" class="ProductImage"></td>
+                <td>تلفزيون Sony</td>
+                <td>syp.6800000</td>
+                <td>تلفزيون من سوني بشاشة 65 بوصة 4K </td>
+                <td><button onclick="addToCart('تلفزيون سوني 2023', 6800000, '13.jpg')">Add To Cart</button></td>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <div class="cart-container" id="cartContainer">
+        <h1 class="cart-title">سلة المشتريات</h1>
+        <table class="cart-table">
+            <thead>
+                <tr>
+                    <th class="product-image">صورة المنتج</th>
+                    <th class="product-name">اسم المنتج</th>
+                    <th class="product-price">سعر المنتج</th>
+                </tr>
+            </thead>
+            <tbody id="cartItems" class="cart-items"></tbody>
+            <tfoot>
+                <tr class="total-row">
+                    <td colspan="2" class="tax-label">الضريبة:</td>
+                    <td id="tax" class="tax-amount">0 ل.س</td>
+                </tr>
+                <tr class="total-row">
+                    <td colspan="2" class="total-label">المبلغ الإجمالي:</td>
+                    <td id="totalAmount" class="total-amount">0 ل.س</td>
+                </tr>
+            </tfoot>
+        </table>
+        <button class="cancel-button" onclick="cancelCart()">إلغاء</button>
+        <button class="checkout-button" onclick="checkout()">متابعة</button>
+    </div>
+    
+    <!-- في الجزء الخاص بالجافا سكريبت -->
+    <script>
+   function addToCart(productName, actualPrice, imageSrc) {
+    const cartContainer = document.getElementById('cartContainer');
+    const cartItemsList = document.getElementById('cartItems');
+    const listItem = document.createElement('tr');
+    listItem.className = 'cart-item';
+    listItem.innerHTML = `
+        <td class="product-image"><img src="${imageSrc}" alt="${productName}" class="ProductImage"></td>
+        <td class="product-name">${productName}</td>
+        <td class="product-price">${actualPrice} ل.س</td>
+    `;
+    cartItemsList.appendChild(listItem);
+
+    // حساب الضريبة والمبلغ الإجمالي
+    calculateTotal();
+    
+    // عرض سلة المشتريات
+    cartContainer.style.display = 'block';
+}
+
+function calculateTotal() {
+    const cartItemsList = document.getElementById('cartItems');
+    const rows = cartItemsList.getElementsByTagName('tr');
+    let totalPrice = 0;
+
+    for (let i = 0; i < rows.length; i++) {
+        const priceCell = rows[i].getElementsByClassName('product-price')[0];
+        const productPrice = parseFloat(priceCell.textContent);
+        totalPrice += productPrice;
+    }
+
+    const tax = 0.15 * totalPrice; // نسبة الضريبة
+    const total = totalPrice + tax;
+
+    document.getElementById('tax').textContent = tax.toFixed(2) + ' ل.س';
+    document.getElementById('totalAmount').textContent = total.toFixed(2) + ' ل.س';
+}
+
+
+function cancelCart() {
+    const cartItemsList = document.getElementById('cartItems');
+    const cartContainer = document.getElementById('cartContainer');
+    cartItemsList.innerHTML = ''; // يفرغ سلة المشتريات
+    cartContainer.style.display = 'none'; // يخفي سلة المشتريات
+}
+
+function checkout() {
+    // توجيه المستخدم إلى صفحة أخرى (مثلاً "checkout.html")
+    window.location.href = 'Details.html';
+}
+    </script>
+
+</body>
+</html>

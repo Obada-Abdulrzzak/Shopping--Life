@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+     <!--المعلومات الخاصة بالزبون-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Information Customer</title>
+
+</head>
+<body class="custom-body">
+    <form id="purchaseForm" class="custom-form">
+        <label for="username" class="custom-label"><b>اسم المستخدم:</b></label>
+        <input type="text" id="username" name="username" pattern="[أ-ي]+" title="الرجاء إدخال اسم باللغة العربية فقط" class="custom-input" required>
+
+        <label for="date" class="custom-label"><b>تاريخ الميلاد</b><br></label>
+        <input type="text" placeholder="DD/MM/YYYY" id="date1" name="date1" pattern="((0[1-9]|1\d|2\d|3[01])\0[1-9]|1[0-2])\/(19|20)\d{2}" class="custom-input" required><br>
+
+        <label for="email" class="custom-label"><b>البريد الإلكتروني:</b></label>
+        <input type="email" id="email" name="email" class="custom-input" required>
+
+        <label for="nationalId" class="custom-label"><b>الرقم الوطني:</b></label>
+        <input type="text" id="nationalId" name="nationalId" pattern="^(0[1-9]|1[0-4])[0-9]{9}$" class="custom-input" required>
+
+        <label for="phone" class="custom-label"><b>رقم الهاتف:</b></label>
+        <input type="tel" id="phone" name="phone" pattern="^\d{14}$" class="custom-input" required>
+
+        <label for="captcha" class="custom-label"><b>رمز Captcha:</b></label>
+        <input type="text" id="captcha" name="captcha" maxlength="6" class="custom-input" required>
+        <img src="" alt="Captcha Image" id="captchaImage" class="custom-captcha-image">
+        <button type="button" onclick="generateCaptcha()" class="custom-captcha-button">تجديد Captcha</button>
+
+        <button type="button" onclick="submitForm()" class="custom-button">شراء</button>
+    </form>
+
+    <div id="message" class="custom-message"></div>
+</body>
+    
+    <script>
+        let totalPrice = 0; // متغير لتخزين السعر الإجمالي
+
+        function generateCaptcha() {
+            const captchaImage = document.getElementById('captchaImage');
+            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            let captcha = '';
+
+            for (let i = 0; i < 6; i++) {
+                captcha += characters.charAt(Math.floor(Math.random() * characters.length));
+            }
+
+            captchaImage.src = 'https://dummyimage.com/120x40/000/fff&text=' + captcha;
+        }
+
+        function submitForm() {
+            const messageElement = document.getElementById('message');
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const nationalId = document.getElementById('nationalId').value;
+            const phone = document.getElementById('phone').value;
+            const captcha = document.getElementById('captcha').value;
+
+            if (validateInputs(username, email, nationalId, phone, captcha)) {
+                totalPrice = calculateTotalPrice();
+                messageElement.textContent = 'تمت العملية بنجاح!  ';
+            } else {
+                messageElement.textContent = 'الرجاء التحقق من صحة البيانات';
+            }
+        }
+
+        function validateInputs(username, email, nationalId, phone, captcha) {
+            const arabicRegex = /^[أ-ي]+$/;
+
+            if (!arabicRegex.test(username)) {
+                alert('الرجاء إدخال اسم باللغة العربية فقط');
+                return false;
+            }
+
+            if (!nationalId.match(/^(0[1-9]|1[0-4])[0-9]{9}$/) || nationalId.length < 11) {
+                alert('الرجاء إدخال رقم وطني صحيح (11 خانة على الأقل)');
+                return false;
+            }
+
+            const storedCaptcha = document.getElementById('captchaImage').src.split('=')[1];
+            if (captcha.toLowerCase() !== storedCaptcha.toLowerCase()) {
+                alert('رمز Captcha غير صحيح');
+                return false;
+            }
+
+            // يمكنك إجراء التحقق من البيانات الأخرى هنا
+
+            return true;
+        }
+
+        function calculateTotalPrice() {
+            return ; 
+        }
+
+        generateCaptcha();
+    </script>
+    
+
+</body>
+</html>
